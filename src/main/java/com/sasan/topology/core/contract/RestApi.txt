@@ -1,0 +1,27 @@
+curl --request POST \
+  --url http://localhost:8080/Topology \
+  --header 'Content-Type: application/json' \
+  --data '{
+
+	"nodes":[1,2,3,4,5,6],
+
+	"edges":[
+		{"source":1,"destination":2},
+		{"source":2,"destination":3},
+		{"source":3,"destination":4},
+		{"source":4,"destination":6},
+		{"source":1,"destination":5},
+		{"source":5,"destination":6}]
+}'
+
+====================================================================================
+====================================================================================
+====================================================================================
+
+curl --request POST \
+  --url http://localhost:8080/calculate-path \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"pathSource":1,
+	"pathDestination":6
+}'
