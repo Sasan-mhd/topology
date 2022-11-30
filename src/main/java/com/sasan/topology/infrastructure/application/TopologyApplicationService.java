@@ -6,10 +6,6 @@ import com.sasan.topology.core.GraphDb;
 import com.sasan.topology.core.Path;
 import com.sasan.topology.core.usecase.PersistGraphUsecase;
 import com.sasan.topology.core.usecase.ShortPathUsecase;
-import org.jgrapht.alg.interfaces.ShortestPathAlgorithm;
-import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
-import org.jgrapht.graph.DefaultDirectedGraph;
-import org.jgrapht.graph.DefaultEdge;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,7 +20,7 @@ public class TopologyApplicationService implements PersistGraphUsecase, ShortPat
     private GraphDb graphDb;
 
     @Autowired
-    DijkstraShortestPathAlgorithm shortestPathAlgorithm;
+    private DijkstraShortestPathAlgorithm shortestPathAlgorithm;
     @Override
     public void save(Graph graph) {
         graphDb.save(graph);

@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.Types;
-import java.util.Arrays;
-import java.util.Objects;
 
 @Configuration
 public class DatabaseInitializer {

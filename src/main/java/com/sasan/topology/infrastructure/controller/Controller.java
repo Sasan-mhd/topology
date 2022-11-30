@@ -13,10 +13,10 @@ import java.util.List;
 public class Controller {
 
     @Autowired
-    ShortPathUsecase shortPathUsecase;
+    private ShortPathUsecase shortPathUsecase;
 
     @Autowired
-    PersistGraphUsecase persistGraphUsecase;
+    private PersistGraphUsecase persistGraphUsecase;
 
     @PostMapping("/Topology")
     public void topology(@RequestBody Graph graph) {

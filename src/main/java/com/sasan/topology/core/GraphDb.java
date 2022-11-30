@@ -1,6 +1,5 @@
 package com.sasan.topology.core;
 
-import com.sasan.topology.core.Graph;
 
 public interface GraphDb {
 
